@@ -5,11 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mitube</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Firebase SDK -->
-  <script type="module">
-    // Import Firebase SDK direkte fra CDN
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
-    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js";
+</head>
+<body>
+  <h1>🎬 Mitube</h1>
+
+  <section id="upload-section">
+    <h2>Upload en video</h2>
+    <input type="text" id="title" placeholder="Titel på video" />
+    <input type="file" id="videoFile" accept="video/*" />
+    <button id="uploadBtn">Upload</button>
+  </section>
+
+  <section id="video-list">
+    <h2>Alle videoer</h2>
+    <div id="videos"></div>
+  </section>
+
+  <!-- Firebase SDK importeres via script.js -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
+
 
    
